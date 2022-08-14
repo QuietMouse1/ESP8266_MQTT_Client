@@ -1,0 +1,8 @@
+
+// Sensor definitions are SENSOR_SCD30, SENSOR_SCD41, SENSOR_BME0680
+
+// #define SENSOR_SCD30 
+#define SENSOR_SCD41 
+// #define SENSOR_BME680
+#define SEALEVELPRESSURE_HPA (1013.25)
+#define SLEEP_TIME 5000

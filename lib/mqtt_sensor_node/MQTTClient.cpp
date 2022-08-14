@@ -194,9 +194,9 @@ bool MQTTClient::readSCD30data()
         char cstr[16];
         sprintf(cstr, "%i", co2Reading);
         pubSubClient.publish("esp/co2", cstr);
-        sprintf(cstr, "%f", airTemperatureReading);
+        sprintf(cstr, "%.2f", airTemperatureReading);
         pubSubClient.publish("esp/temperature", cstr);
-        sprintf(cstr, "%f", humidityReading);
+        sprintf(cstr, "%.3f", humidityReading);
         pubSubClient.publish("esp/humidity", cstr);
 
         Serial.print("co2(ppm):");
@@ -343,10 +343,11 @@ bool MQTTClient::readSCD41data()
 
         char cstr[16];
         sprintf(cstr, "%i", co2);
+        // Co2:1231        Temperature:30.81       Humidity:69.49
         pubSubClient.publish("scd41/co2", cstr);
-        sprintf(cstr, "%f", temperature);
+        sprintf(cstr, "%.2f", temperature);
         pubSubClient.publish("scd41/temperature", cstr);
-        sprintf(cstr, "%f", humidity);
+        sprintf(cstr, "%.2f", humidity);
         pubSubClient.publish("scd41/humidity", cstr);
         Serial.print("Co2:");
         Serial.print(co2);

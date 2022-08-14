@@ -1,6 +1,4 @@
-#include "MQTTClient.h"
-
-#define SLEEP_TIME 5000
+#include <MQTTClient.h>
 
 // To do
 // debug lights - Connecting problems, fail to connect to wifi or fail to connecto to mqtt server.
@@ -15,7 +13,7 @@
 const char *ssid = "SINGTEL-61B8"; // Song han wifi password lmfao kek
 const char *password = "0001663416"; // 
 const char *mqttServer = "192.168.1.87";
-const int mqttPort = 1883;
+const int mqttPort = 1884;
 
 const char *mqttUser = "user";
 const char *mqttPassword = "user";

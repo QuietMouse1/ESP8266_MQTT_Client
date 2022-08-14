@@ -1,10 +1,5 @@
-// Sensor definitions are SENSOR_SCD30, SENSOR_SCD41, SENSOR_BME0680
 
-// #define SENSOR_SCD30 
-// #define SENSOR_SCD41 
-#define SENSOR_BME680
-#define SEALEVELPRESSURE_HPA (1013.25)
-
+#include "config.h"
 #include <Arduino.h>
 #include <PubSubClient.h>
 #include <ESP8266WiFi.h>
@@ -12,7 +7,7 @@
 #include "SparkFun_SCD30_Arduino_Library.h" 
 #include <Adafruit_Sensor.h>
 #include "Adafruit_BME680.h"
-#include <SensirionI2CScd4x.h>
+#include <SensirionI2CScd4x.h> // << SCD41 sensor libary
 #include "Zanshin_BME680.h"   ///< The BME680 sensor library
 
 // Sensor Helper Functions
